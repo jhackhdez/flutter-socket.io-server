@@ -21,7 +21,7 @@
       socket.emit("message", { nombre: "Jorge" });
 
       // Para escuchar mensaje emitido desde server
-      client.on("message", function (payload) {
+      socket.on("nuevo-mensaje", function (payload) {
         console.log('Escuchando:', payload);
       });
     </script>
