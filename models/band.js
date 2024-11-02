@@ -1,8 +1,8 @@
-const { v4: uuidV4 } = require("uuid");
+const uuid = require('uuid');
 
 class Band {
-  construtor(name = "no-name") {
-    this.id = uuidV4; // identificador único
+  constructor(name = "no-name") {
+    this.id = uuid.v4(); // identificador único
     this.name = name;
     this.votes = 0;
   }

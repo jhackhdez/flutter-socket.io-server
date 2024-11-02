@@ -17,6 +17,11 @@
         console.log("Perdimos conexión con el servidor");
       });
 
+      socket.on('active-bands', function (bands) {
+        console.clear();
+        console.table("Bandas activas", bands);
+      });
+
       // Para emitir un evento desde cliente
       socket.emit("message", { nombre: "Jorge" });
 
